@@ -50,19 +50,27 @@
         <p class="mb-2" style="word-break: break-word;">{{$post->body}}</p>
 
         <div class="flex items-center">
-            @if(!$post->likedBy(auth()->user()))
-            <form action="{{route('posts.likes', $post->id)}}" method="post" class="mr-1">
-                @csrf
-                <button type="submit" class="text-blue-500">Like</button>
-            </form>
+
+            @auth
+
+             @if(!$post->likedBy(auth()->user()))
+ 
+              <form action="{{route('posts.likes', $post->id)}}" method="post" class="mr-1">
+                  @csrf
+                  <button type="submit" class="text-blue-500">Like</button>
+              </form>
           
-            @else
-            <form action="{{route('posts.dislikes', $post->id)}}" method="post" class="mr-1">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="text-blue-500">Unlike</button>
-            </form>
-            @endif
+              @else
+  
+              <form action="{{route('posts.dislikes', $post->id)}}" method="post" class="mr-1">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="text-blue-500">Unlike</button>
+              </form>
+ 
+             @endif
+
+            @endauth
 
             <span>{{$post->likes->count()}} {{Str::plural('like', $post->likes->count())}}</span>
 

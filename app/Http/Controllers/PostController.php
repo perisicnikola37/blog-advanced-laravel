@@ -17,7 +17,8 @@ class PostController extends Controller
         // $posts = Post::all();
         // $posts = Post::get();
 
-        $posts = Post::paginate(2);
+        // user and likes relationship
+        $posts = Post::with(['user', 'likes'])->paginate(20);
 
         return view('posts.index', [
             'posts' => $posts
