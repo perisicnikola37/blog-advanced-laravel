@@ -49,7 +49,10 @@
     
         <p style="word-break: break-word;">{{$post->body}}</p>
 
-        @if ($post->ownedBy(Auth::user()))
+        {{-- Changed to "PostPolicy" --}}
+        {{-- @if ($post->ownedBy(Auth::user())) --}}
+        
+        @can('delete', $post)
         
         <div>
             <form action="{{route('posts.destroy', $post->id)}}" method="post">
@@ -63,7 +66,9 @@
              </form>
         </div>
 
-        @endif
+        @endcan
+
+        {{-- @endif --}}
 
         <div class="flex items-center">
 
