@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostLikeController;
 use Illuminate\Support\Facades\Route;
 
 // Home
@@ -33,3 +34,10 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 // Posts
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::post('/posts', [PostController::class, 'store']);
+
+// Like
+Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
+
+
+// Dislike
+Route::delete('/posts/{post}/dislikes', [PostLikeController::class, 'destroy'])->name('posts.dislikes');
