@@ -47,7 +47,23 @@
     </a>
         <span class="text-gray-400 text-sm">{{$post->created_at->diffForHumans()}}</span>
     
-        <p class="mb-2" style="word-break: break-word;">{{$post->body}}</p>
+        <p style="word-break: break-word;">{{$post->body}}</p>
+
+        @if ($post->ownedBy(Auth::user()))
+        
+        <div>
+            <form action="{{route('posts.destroy', $post->id)}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button
+                type="submit" 
+                class="bg-red-500 hover:bg-red-700 text-white text-sm font-bold py-1 px-3 rounded">
+                    Delete
+                  </button>
+             </form>
+        </div>
+
+        @endif
 
         <div class="flex items-center">
 
