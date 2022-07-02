@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="flex justify-center">
-<div class="w-4/12 bg-white p-6 rounded-sm">
+<div class="w-12/12 bg-white p-6 rounded-sm">
 
 
 @auth
@@ -47,7 +47,7 @@
     </a>
         <span class="text-gray-400 text-sm">{{$post->created_at->diffForHumans()}}</span>
     
-        <p class="mb-2">{{$post->body}}</p>
+        <p class="mb-2" style="word-break: break-word;">{{$post->body}}</p>
 
 </div>
     
