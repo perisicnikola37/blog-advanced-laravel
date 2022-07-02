@@ -14,7 +14,9 @@ class User extends Authenticatable
 
     protected $guarded = [];
 
-
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
 
     /**
      * The attributes that are mass assignable.
