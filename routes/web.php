@@ -49,3 +49,6 @@ Route::delete('/posts/{post}/dislikes', [PostLikeController::class, 'destroy'])-
 
 
 Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
+
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+

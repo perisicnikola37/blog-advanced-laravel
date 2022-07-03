@@ -48,6 +48,14 @@ class PostController extends Controller
 
     }
 
+    public function show(Post $post) {
+
+        return view('posts.show', [
+            'post' => $post,
+        ]);
+
+    }
+
     public function destroy(Post $post, Request $request) {
 
         // 'delete' is the method name inside "PostPolicy"
