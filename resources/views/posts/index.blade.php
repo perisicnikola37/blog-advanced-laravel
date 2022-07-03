@@ -40,7 +40,7 @@
 
 <div class="mb-3">
 
-    <a href="" class="font-bold">
+    <a href="{{route('users.posts', $post->user)}}" class="font-bold">
         
         {{$post->user->name}}
 

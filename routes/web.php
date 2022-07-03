@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
+use App\Http\Controllers\UserPostController;
 use Illuminate\Support\Facades\Route;
 
 // Home
@@ -43,3 +44,8 @@ Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('
 
 // Dislike
 Route::delete('/posts/{post}/dislikes', [PostLikeController::class, 'destroy'])->name('posts.dislikes');
+
+
+
+
+Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
