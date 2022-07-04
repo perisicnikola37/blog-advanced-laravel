@@ -26,6 +26,9 @@ class User extends Authenticatable
         return $this->hasManyThrough(Like::class, Post::class);
     }
 
+    public function quotes() {
+        return $this->hasMany(Quote::class);
+    }
     /**
      * The attributes that are mass assignable.
      *

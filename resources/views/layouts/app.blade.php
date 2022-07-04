@@ -28,13 +28,22 @@
         <li>
             <a href="{{route('posts')}}" class="p-3">Post</a>
         </li>
+
+        @if (Auth::user()->admin == 'true' || Auth::user()->admin == 'TRUE')
+
+        <li>
+            <a href="{{route('quotes')}}" class="p-3">Quote</a>
+        </li>
+
+        @endif
+
        </ul>
 
        <ul class="flex items-center">
 
         @auth
         <li>
-            <a href="" class="p-3">{{auth()->user()->name}}</a>
+            <a href="{{route('home')}}" class="p-3">{{Auth::user()->name}}</a>
         </li>
         <li>
             <form action="{{route('logout')}}" method="post" class="inline">
