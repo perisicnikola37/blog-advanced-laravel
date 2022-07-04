@@ -44,8 +44,7 @@ class PostController extends Controller
 
         auth()->user()->posts()->create($input);
 
-        return back();
-
+        return back()->with('success-post', 'You have successfully published your post!');
     }
 
     public function show(Post $post) {
@@ -63,7 +62,7 @@ class PostController extends Controller
 
         $post->delete();
 
-        return back();
+        return back()->with('delete-post', 'You have successfully deleted your post!');
 
     }
 

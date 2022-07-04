@@ -1,0 +1,112 @@
+[33mcommit a9e3f1ecb83b85bc57d0c96942bdff800508e07c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Tue Jul 5 01:22:38 2022 +0200
+
+    Added border below active link page and some stylings
+
+[33mcommit 6964692c67d4190245a13dec6ab00dabacf856ef[m[33m ([m[1;31morigin/quote_making[m[33m, [m[1;31morigin/queries_optimize[m[33m, [m[1;31morigin/feature[m[33m)[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Tue Jul 5 00:59:41 2022 +0200
+
+    Changed titles to pages
+
+[33mcommit 1aa00a063bbf04b45c17a4f03a86169d38b4239a[m
+Merge: ac9839b 42ac4c7
+Author: Dzoni <5dzoni5@gmail.com>
+Date:   Tue Jul 5 02:23:22 2022 +0400
+
+    Merge pull request #3 from dzonidevv/quote_making - Added  table, migration and model
+
+[33mcommit 42ac4c75c5fec1ebe0df3c4830988ef03604494b[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Tue Jul 5 00:22:38 2022 +0200
+
+    Added  table, migration and model
+
+[33mcommit ac9839b7b857904883ef1820718186d9cde75ec2[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Mon Jul 4 23:35:30 2022 +0200
+
+    Finished sending email when user likes someones post
+
+[33mcommit 446c7d5b253f99a0c6d60a0b6c03a8196678af09[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Mon Jul 4 00:08:45 2022 +0200
+
+    Finished individual post page
+
+[33mcommit 4b227b33f075d0097586d66f9705444978c36812[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Mon Jul 4 00:04:35 2022 +0200
+
+    Finished user posts likes count with HasManyThrough relationship
+
+[33mcommit 4b100a7f4448fd65f99b889af8ba4cd87875c597[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sun Jul 3 23:50:23 2022 +0200
+
+    Finished User profile page with username of user inside url
+
+[33mcommit 00a2f17673c0aa2264bbf8dc0f4c202cc9532e5d[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sat Jul 2 21:27:19 2022 +0200
+
+    Added PostPolicy
+
+[33mcommit 72929ee2d2ec6224a127b548d51c06be71d50bbe[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sat Jul 2 21:16:04 2022 +0200
+
+    Finished Deleting Posts - with authorization
+
+[33mcommit 3f0a27aed66b581f8abbc1ada17dc977153f5a71[m
+Merge: 26fe4b3 a6ef736
+Author: Dzoni <5dzoni5@gmail.com>
+Date:   Sun Jul 3 01:05:54 2022 +0400
+
+    Merge pull request #2 from dzonidevv/queries_optimize - from 15 to 5
+
+[33mcommit 26fe4b3cba3158e0080e8bed66ee9624bc0b25a0[m
+Merge: 6c2d647 4913d36
+Author: Dzoni <5dzoni5@gmail.com>
+Date:   Sun Jul 3 00:54:42 2022 +0400
+
+    Merge pull request #1 from dzonidevv/feature - branch for creating like/unlike system
+    
+    Feature Initial Commit - finished Like/Unlike system
+
+[33mcommit a6ef736bc06025d957cd4aa5ce85a19cae9139c2[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sat Jul 2 21:05:19 2022 +0200
+
+    Optimized Queries - from 15 to 5
+
+[33mcommit 4913d3606fccc2f9e172abdf9010b30b9c5cf067[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sat Jul 2 20:53:49 2022 +0200
+
+    Feature Initial Commit - finished Like/Unlike system
+
+[33mcommit 6c2d6472e815589b6b0bbb524bc8e7c1c4c9d908[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sat Jul 2 19:51:32 2022 +0200
+
+    Finished Post and User factories
+
+[33mcommit 5a676395d01b83ce99d19c3459abfc3a0d3f85e0[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sat Jul 2 19:41:17 2022 +0200
+
+    Finished storing posts and pagination
+
+[33mcommit 47ab32256d46c4b23f32256b8cb5a692a7d5cdd7[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Sat Jul 2 01:10:47 2022 +0200
+
+    Finished custom Login/Registration System - with logout
+
+[33mcommit ffc075abc6f891c246e8e6f4a2f59807843dd2db[m
+Author: Nikola Perisic <5dzoni5@gmail.com>
+Date:   Fri Jul 1 23:31:30 2022 +0200
+
+    Initial Commit

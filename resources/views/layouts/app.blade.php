@@ -20,13 +20,27 @@
     <nav class="p-6 bg-white flex justify-between mb-6">
        <ul class="flex items-center">
         <li>
-            <a href="/" class="p-3">Home</a>
+            <a style="transition: 0.25s" href="/" class="p-2 rounded-sm
+            
+            {{ (request()->is('/')) ? 'border-b-2 border-indigo-500' : '' }}
+
+            ">Home</a>
         </li>
+        
         <li>
-            <a href="{{route('dashboard')}}" class="p-3">Dashboard</a>
+            <a href="{{route('dashboard')}}" class="p-2 
+            
+            {{ (request()->is('dashboard')) ? 'border-b-2 border-indigo-500' : '' }}
+
+            ">Dashboard</a>
         </li>
+
         <li>
-            <a href="{{route('posts')}}" class="p-3">Post</a>
+            <a href="{{route('posts')}}" class="p-2 
+            
+            {{ (request()->is('posts')) ? 'border-b-2 border-indigo-500' : '' }}
+
+            ">Post</a>
         </li>
 
         @auth
@@ -34,7 +48,11 @@
         @if (Auth::user()->admin == 'true' || Auth::user()->admin == 'TRUE')
 
         <li>
-            <a href="{{route('quotes')}}" class="p-3">Quote</a>
+            <a href="{{route('quotes')}}" class="p-2 
+            
+            {{ (request()->is('quotes')) ? 'border-b-2 border-indigo-500' : '' }}
+
+            ">Quote</a>
         </li> 
 
         @endif
@@ -50,7 +68,7 @@
             <a href="{{route('home')}}" class="p-3">{{Auth::user()->name}}</a>
         </li>
         <li>
-            <form action="{{route('logout')}}" method="post" class="inline">
+            <form action="{{route('logout')}}" method="post" class="inline p-2 bg-blue-400 hover:bg-sky-700 text-white rounded-sm">
                 @csrf
                 <button type="submit">Logout</button>
             </form>
