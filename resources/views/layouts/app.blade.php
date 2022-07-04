@@ -29,13 +29,17 @@
             <a href="{{route('posts')}}" class="p-3">Post</a>
         </li>
 
+        @auth
+        
         @if (Auth::user()->admin == 'true' || Auth::user()->admin == 'TRUE')
 
         <li>
             <a href="{{route('quotes')}}" class="p-3">Quote</a>
-        </li>
+        </li> 
 
         @endif
+
+        @endauth
 
        </ul>
 

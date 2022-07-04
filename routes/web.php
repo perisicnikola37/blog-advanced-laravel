@@ -39,7 +39,9 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 // Posts
-Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::get('/posts', [PostController::class, 'index'])
+->name('posts')
+->middleware('auth');;
 Route::post('/posts', [PostController::class, 'store']);
 Route::delete('/posts/{post}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
 

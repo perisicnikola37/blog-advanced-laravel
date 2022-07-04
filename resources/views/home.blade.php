@@ -18,7 +18,15 @@
     <option value="">Money</option>
 </select> --}}
 
+@if ($quote)
+
 <p>"{{$quote->body}}" - <span style="font-style: italic">{{$quote->author}}</span></p>
+
+@else
+
+<p>There are no quotes at the moment..</p>
+
+@endif
 
 </div>
 
