@@ -8,6 +8,23 @@
 <div class="w-12/12 bg-white p-6 rounded-sm">
 
 
+    @if (session()->has('success-post'))
+
+    <div class="bg-green-500 p-1 rounded-sm mb-6 text-white text-center">
+        {{session('success-post')}}
+    </div>
+          
+    @endif
+
+    @if (session()->has('delete-post'))
+
+    <div class="bg-red-500 p-1 rounded-sm mb-6 text-white text-center">
+        {{session('delete-post')}}
+    </div>
+
+    @endif
+
+
 @auth
 
 <form action="{{route('posts')}}" method="post" class="mb-4">
