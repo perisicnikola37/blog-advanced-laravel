@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<title>Dashboard</title>
+
 @section('content')
 
 <div class="flex justify-center">
