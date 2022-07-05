@@ -71,7 +71,7 @@ class PostController extends Controller
        
         $searched = $_GET['query'];
 
-        $posts = Post::where('title', 'LIKE', '%' . $searched . '%')->get();
+        $posts = Post::where('title', 'LIKE', '%' . $searched . '%')->latest()->with(['user', 'likes'])->get();
 
         return view('search', compact('posts', 'searched'));
 

@@ -9,7 +9,9 @@ use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\UserPostController;
 use App\Models\Quote;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 // Home
 Route::get('/', function() {
@@ -49,13 +51,8 @@ Route::delete('/posts/{post}/delete', [PostController::class, 'destroy'])->name(
 Route::get('/quotes', [QuoteController::class, 'index'])->name('quotes');
 Route::post('/quotes', [QuoteController::class, 'store']);
 
-
-
-
-
 // Like
 Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
-
 
 // Dislike
 Route::delete('/posts/{post}/dislikes', [PostLikeController::class, 'destroy'])->name('posts.dislikes');
@@ -66,5 +63,6 @@ Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])
 // Show single post 
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
-
+// Search
 Route::get('/search', [PostController::class, 'search'])->name('search');
+
