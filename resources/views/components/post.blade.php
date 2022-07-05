@@ -7,8 +7,12 @@
             {{$post->user->name}}
     
         </a>
-            <span class="text-gray-400 text-sm">{{$post->created_at->diffForHumans()}}</span>
+            | <span class="text-gray-400 text-sm">{{$post->created_at->diffForHumans()}}</span>
         
+            <hr class="mt-2 mb-2">
+
+            <p style="word-break: break-word;" class="font-bold">{{$post->title}}</p>
+
             <p style="word-break: break-word;">{{$post->body}}</p>
     
             {{-- Changed to "PostPolicy" --}}

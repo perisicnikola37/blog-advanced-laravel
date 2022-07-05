@@ -24,8 +24,8 @@ class QuoteRequest extends FormRequest
     public function rules()
     {
         return [
-            'author' => 'required|min:2|max:255|regex:/^[a-zA-Z]+$/u',
-            'body' => 'required|min:10|max:255|regex:/^[a-zA-Z]+$/u',
+            'author' => 'required|min:2|max:255|alpha',
+            'body' => 'required|min:10|max:255|alpha',
         ];
     }
 }

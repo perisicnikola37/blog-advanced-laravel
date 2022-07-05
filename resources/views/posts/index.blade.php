@@ -30,9 +30,7 @@
 
 <div>
             
-            
-
-
+        
     <form class="flex items-center" action="{{route('search')}}" method="GET">   
 
         <div class="relative w-full">
@@ -53,12 +51,21 @@
 
     <div class="mb-4">
 
-        <p class="text-center mb-5 font-medium">Create post</p>
+        <p class="mb-5 font-medium text-2xl">Create post</p>
+
+        @error('title')
+        <p class="mb-2">{{$message}}</p>
+        @enderror
+        <input 
+        type="text" 
+        id="title" 
+        name="title"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-4 rounded-sm @error('title') border-red-500 @enderror" 
+        placeholder="Enter your title..."
+        value="{{old('title')}}" >
 
         <br>
         <br>
-
-        <label for="body" class="sr-only">Body</label>
 
         @error('body')
         <p class="mb-2">{{$message}}</p>

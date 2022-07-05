@@ -33,7 +33,8 @@ class PostController extends Controller
 
         // Using External Request
         // $this->validate($request, [
-        //     'body' => 'required|min:2|max:255',
+        //     'title' => 'required|min:2|max:255|alpha',
+        //     'body' => 'required|min:10|max:255|alpha',
         // ]);
 
         // Using Relationship insted of this
@@ -70,7 +71,7 @@ class PostController extends Controller
        
         $searched = $_GET['query'];
 
-        $posts = Post::where('body', 'LIKE', '%' . $searched . '%')->get();
+        $posts = Post::where('title', 'LIKE', '%' . $searched . '%')->get();
 
         return view('search', compact('posts', 'searched'));
 
