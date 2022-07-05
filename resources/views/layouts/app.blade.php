@@ -56,7 +56,7 @@
         <li>
             <a href="{{route('posts')}}" class="p-2 
             
-            {{ (request()->is('posts')) ? 'border-b-2 border-indigo-500' : '' }}
+            {{ (request()->is('posts')) || (request()->is('search')) ? 'border-b-2 border-indigo-500' : '' }}
 
             ">Post</a>
         </li>
