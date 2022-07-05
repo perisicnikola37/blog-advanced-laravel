@@ -66,3 +66,5 @@ Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])
 // Show single post 
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
+
+Route::get('/search', [PostController::class, 'search'])->name('search');
