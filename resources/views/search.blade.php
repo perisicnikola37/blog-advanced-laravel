@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<title>Cao</title>
+<title>Search posts..</title>
 
 @section('content')
 
