@@ -1,6 +1,6 @@
 @props(['post' => $post])
 
-    <div class="mb-3">
+    <div class="mb-4">
 
         <a href="{{route('users.posts', $post->user)}}" class="font-bold">
             
@@ -22,7 +22,7 @@
                     @method('DELETE')
                     <button
                     type="submit" 
-                    class="bg-red-500 hover:bg-red-700 text-white text-sm font-bold py-1 px-3 rounded">
+                    class="mt-2 bg-red-500 hover:bg-red-700 text-white text-sm font-bold py-1 px-3 rounded">
                         Delete
                       </button>
                  </form>
@@ -32,7 +32,7 @@
     
             {{-- @endif --}}
     
-            <div class="flex items-center">
+            <div class="flex">
     
                 @auth
     
@@ -54,6 +54,7 @@
                  @endif
     
                 @endauth
+
     
                 <span>{{$post->likes->count()}} {{Str::plural('like', $post->likes->count())}}</span>
     

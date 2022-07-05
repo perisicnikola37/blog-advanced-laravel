@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="flex justify-center">
-<div class="w-12/12 bg-white p-6 rounded-sm">
+<div class="w-8/12 bg-white p-6 rounded-sm">
 
 
     @if (session()->has('success-post'))
@@ -35,15 +35,17 @@
         <p class="text-center mb-5 font-medium">Create post</p>
 
         <label for="body" class="sr-only">Body</label>
-        <textarea name="body" id="body" cols="30" rows="4" class="bg-gray-100 border-2 w-full p-4 rounded-sm @error('body') border-red-500 @enderror" placeholder="Post something..."></textarea>
 
         @error('body')
-
-        <div class="text-red-500 mt-2 text-sm">
-            {{$message}}
-        </div>
-            
+        <p class="mb-2">{{$message}}</p>
         @enderror
+        <textarea 
+        name="body" 
+        id="body" 
+        cols="30" 
+        rows="4" 
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-4 rounded-sm @error('body') border-red-500 @enderror" placeholder="Post something..."
+        value="{{old('body')}}"></textarea>
 
     </div>
 

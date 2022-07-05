@@ -35,7 +35,7 @@
 <div class="flex justify-center mt-5">
 
 <img
-class="rounded-lg" 
+class="rounded-lg mb-5" 
 src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/988/posts/30254/image/website-homepage%20(1).jpg" 
 alt="">
 

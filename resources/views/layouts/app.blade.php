@@ -13,6 +13,24 @@
     {{-- Tailwind --}}
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        /* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6366F1;
+}
+
+    </style>
+
 </head>
 
 <body class="bg-gray-200">

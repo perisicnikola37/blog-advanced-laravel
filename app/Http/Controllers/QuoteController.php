@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\QuoteRequest;
 use App\Models\Quote;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,15 +16,15 @@ class QuoteController extends Controller
 
     }
 
-    public function store(Request $request) {
+    public function store(QuoteRequest $request) {
 
         $input = $request->all();
 
         // Using External Request
-        $this->validate($request, [
-            'author' => 'required',
-            'body' => 'required',
-        ]);
+        // $this->validate($request, [
+        //     'author' => 'required',
+        //     'body' => 'required',
+        // ]);
 
         // Quote::create([
         //     'author' => $request->author,
