@@ -66,4 +66,14 @@ class PostController extends Controller
 
     }
 
+    public function search() {
+       
+        $searched = $_GET['query'];
+
+        $posts = Post::where('body', 'LIKE', '%' . $searched . '%')->get();
+
+        return view('search', compact('posts', 'searched'));
+
+    }
+
 }

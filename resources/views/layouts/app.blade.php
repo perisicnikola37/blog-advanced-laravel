@@ -107,8 +107,8 @@
 
 @yield('content')
 
-
-
+{{-- Font Awesome --}}
+<script src="https://kit.fontawesome.com/2824446f9a.js" crossorigin="anonymous"></script>
 
 </body>
 
