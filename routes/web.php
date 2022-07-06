@@ -19,8 +19,11 @@ Route::get('/', function() {
 
     $quote = Quote::latest('created_at')->first();
 
+    $user = Auth::user();
+
     return view('home', [
         'quote' => $quote,
+        'user' => $user,
     ]);
 
 })->name('home');
@@ -67,5 +70,8 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 // Search
 Route::get('/search', [PostController::class, 'search'])->name('search');
 
+Route::get('/user/{user:username}/profile', [UserController::class, 'show'])->name('users.profile');
+
 // For user picture form
-Route::post('/user/{id}/picture', [UserController::class, 'store'])->name('users.picture');
+Route::post('/user/{id}/update', [UserController::class, 'update'])->name('users.update');
+

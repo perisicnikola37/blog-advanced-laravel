@@ -12,7 +12,11 @@ class QuoteController extends Controller
     
     public function index() {
         
-        return view('admin.quotes.index');
+        $user = Auth::user();
+
+        return view('admin.quotes.index', [
+            'user' => $user,
+        ]);
 
     }
 

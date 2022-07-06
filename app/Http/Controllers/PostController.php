@@ -72,6 +72,8 @@ class PostController extends Controller
 
     public function search() {
        
+        $user = Auth::user();
+
         $searched = $_GET['query'];
 
         $posts = Post::where('title', 'LIKE', '%' . $searched . '%')->latest()->with(['user', 'likes'])->get();
@@ -79,6 +81,7 @@ class PostController extends Controller
         return view('search', [
             'searched' => $searched,
             'posts' => $posts,
+            'user' => $user,
         ]);
 
     }

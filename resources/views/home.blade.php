@@ -7,7 +7,7 @@
 <div class="flex justify-center">
 <div class="w-8/12 bg-white p-6 rounded-sm">
 
-<h1 class="font-bold">Welcome back<span class="text-blue-700">{{auth()->user() ? ' ' . Auth::user()->name : ' there!'}}</span></h1>
+<h1 class="font-bold">Welcome back<span class="text-blue-700">{{Auth::check() ? ' ' . Auth::user()->name : ' there!'}}</span></h1>
 <p class="mt-2">How are you today..? I have an quote for you, hope you will like it &#128512;</p>
 <p class="mt-2 mb-2 text-rose-500">Quote:</p>
 {{-- <select name="select" id="select">
