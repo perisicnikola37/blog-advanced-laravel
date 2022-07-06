@@ -19,19 +19,25 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('username');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('admin')->default('false');
-            $table->rememberToken();
+            $table->string('picture')->default('no-picture');
+            $table->string('random')->default('img/avatar.png');
             $table->timestamps();
+            $table->rememberToken();
         });
 
         DB::table('users')->insert([
             'name' => 'Test User',
-            'email' => 'test@gmail.com',
-            'password' => Hash::make('testblog'),
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('password'),
             'admin' => 'true',
+            'picture' => 'no-picture',
+            'random' => 'img/avatar.png',
             'created_at' => Carbon::now(),
         ]);
 

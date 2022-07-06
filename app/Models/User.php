@@ -12,6 +12,14 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $path = '/storage/profile_images/';
+
+    public function getPictureAttribute($picture) {
+
+        return $this->path . $picture;
+
+    }
+
     protected $guarded = [];
 
     public function posts() {

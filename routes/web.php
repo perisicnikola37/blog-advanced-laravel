@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserPostController;
 use App\Models\Quote;
 use Illuminate\Support\Facades\Auth;
@@ -66,3 +67,5 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 // Search
 Route::get('/search', [PostController::class, 'search'])->name('search');
 
+// For user picture form
+Route::post('/user/{id}/picture', [UserController::class, 'store'])->name('users.picture');

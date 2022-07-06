@@ -21,8 +21,11 @@ class PostController extends Controller
         // $posts = Post::orderBy('created_at', 'desc')->with(['user', 'likes'])->paginate(20);
         $posts = Post::latest()->with(['user', 'likes'])->paginate(20);
 
+        $user = Auth::user();
+    
         return view('posts.index', [
-            'posts' => $posts
+            'posts' => $posts,
+            'user' => $user,
         ]);
 
     }
@@ -73,7 +76,10 @@ class PostController extends Controller
 
         $posts = Post::where('title', 'LIKE', '%' . $searched . '%')->latest()->with(['user', 'likes'])->get();
 
-        return view('search', compact('posts', 'searched'));
+        return view('search', [
+            'searched' => $searched,
+            'posts' => $posts,
+        ]);
 
     }
 
