@@ -47,7 +47,7 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 // Posts
 Route::get('/posts', [PostController::class, 'index'])
 ->name('posts')
-->middleware('auth');;
+->middleware('auth');
 Route::post('/posts', [PostController::class, 'store']);
 Route::delete('/posts/{post}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
 
@@ -74,4 +74,5 @@ Route::get('/user/{user:username}/profile', [UserController::class, 'show'])->na
 
 // For user picture form
 Route::post('/user/{id}/update', [UserController::class, 'update'])->name('users.update');
+
 

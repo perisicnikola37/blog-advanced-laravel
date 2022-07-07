@@ -53,8 +53,11 @@ class PostController extends Controller
 
     public function show(Post $post) {
 
+        $user = Auth::user();
+
         return view('posts.show', [
             'post' => $post,
+            'user' => $user,
         ]);
 
     }
