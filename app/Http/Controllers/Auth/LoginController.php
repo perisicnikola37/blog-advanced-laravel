@@ -25,7 +25,9 @@ class LoginController extends Controller
             return back()->with('status', 'Invalid credentials!');
         }
 
-        return redirect()->route('home');
+        session()->flash('logged-in', 'Logged in!');
+
+        return redirect()->route('home')->withFragment('logged-in');
 
     }
 

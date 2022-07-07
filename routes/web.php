@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\QuoteController;
@@ -13,9 +14,11 @@ use App\Models\Quote;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+// Redirect
+Route::get('/', [HomeController::class, 'redirect']);
 
 // Home
-Route::get('/', function() {
+Route::get('/home', function() {
 
     $quote = Quote::latest('created_at')->first();
 

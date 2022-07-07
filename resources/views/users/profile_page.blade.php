@@ -13,7 +13,7 @@
                 {{session('success-profile')}}
             </div>
                   
-            @endif
+        @endif
 
         <h3 class="font-bold">Profile settings <i class="fas fa-cogs"></i></h3>
     
