@@ -21,18 +21,33 @@
             @can('delete', $post)
             
             <div>
+                
                 <form action="{{route('posts.destroy', $post->id)}}" method="post">
                     @csrf
                     @method('DELETE')
+
+                    <input 
+                    style="cursor: pointer"
+                    class="mt-2 bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-1 px-4 rounded" 
+                    type="button" 
+                    onclick="location.href='{{route('posts.edit', $post->id)}}'" 
+                    value="Edit" />
+                
+
+
                     <button
                     type="submit" 
                     class="mt-2 bg-red-500 hover:bg-red-700 text-white text-sm font-bold py-1 px-3 rounded">
-                        Delete
-                      </button>
+                    Delete
+                    </button>
+                      
                  </form>
             </div>
     
             @endcan
+
+
+          
     
             {{-- @endif --}}
     

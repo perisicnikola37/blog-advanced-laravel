@@ -75,7 +75,13 @@ Route::get('/search', [PostController::class, 'search'])->name('search');
 
 Route::get('/user/{user:username}/profile', [UserController::class, 'show'])->name('users.profile');
 
-// For user picture form
-Route::post('/user/{id}/update', [UserController::class, 'update'])->name('users.update');
+// User edit
+Route::put('/user/{id}/update', [UserController::class, 'update'])->name('users.update');
 
+// Post edit
 
+Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+
+// Post update
+
+Route::put('/posts/{id}/update', [PostController::class, 'update'])->name('posts.update');

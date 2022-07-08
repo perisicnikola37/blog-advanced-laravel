@@ -85,6 +85,8 @@
 
 </form>
 
+<p class="mb-3">You are viewing today's posts..</p>
+
 @if ($posts->count())
 
 @foreach ($posts as $post)
@@ -93,7 +95,11 @@
     
 @endforeach
 
+@if ($posts)
+
 {{$posts->links()}}
+    
+@endif
 
 @else
 

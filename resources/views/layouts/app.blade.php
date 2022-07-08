@@ -12,6 +12,7 @@
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png">
     {{-- Tailwind --}}
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <style>
 
@@ -84,7 +85,7 @@
 
         @auth
         <li>
-            <a href="{{route('users.profile', $user)}}" class="p-3">{{Auth::user()->name}}</a>
+            <a href="{{route('users.profile', $user->id)}}" class="p-3 text-hover">{{Auth::user()->name}}</a>
         </li>
         <li>
             <form action="{{route('logout')}}" method="post" class="inline p-2 bg-blue-400 hover:bg-sky-700 text-white rounded-sm">

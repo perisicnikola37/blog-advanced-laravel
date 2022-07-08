@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
+use App\Http\Requests\PostUpdateRequest;
 use App\Models\Post;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -19,13 +22,18 @@ class PostController extends Controller
 
         // user and likes relationship
         // $posts = Post::orderBy('created_at', 'desc')->with(['user', 'likes'])->paginate(20);
+
+        // new convention
         $posts = Post::latest()->with(['user', 'likes'])->paginate(20);
+
+        $today_posts = Post::whereDate('created_at', Carbon::today())->get();
 
         $user = Auth::user();
     
         return view('posts.index', [
             'posts' => $posts,
             'user' => $user,
+            'today_posts' => $today_posts,
         ]);
 
     }
@@ -49,6 +57,31 @@ class PostController extends Controller
         auth()->user()->posts()->create($input);
 
         return back()->with('success-post', 'You have successfully published your post!');
+    }
+
+    public function edit(Request $request, $id) {
+
+        $post = Post::findOrFail($id);
+
+        $user = Auth::user();
+
+        return view('posts.edit', [
+            'user' => $user,
+            'post' => $post,
+        ]);
+
+    }
+
+    public function update(PostUpdateRequest $request, $id) {
+
+        $input = $request->all();
+
+        $post = Post::findOrFail($id);
+
+        $post->update($input);
+
+        return back()->with('post-updated', 'Your post has been successfully updated!');
+
     }
 
     public function show(Post $post) {

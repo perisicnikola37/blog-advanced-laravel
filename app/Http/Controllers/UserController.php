@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserUpdateRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -74,7 +75,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserUpdateRequest $request, $id)
     {
         
         $input = $request->all();
@@ -94,6 +95,14 @@ class UserController extends Controller
         }
 
         $user->whereId($id)->first()->update($input);
+
+        // if(isset($user)) {
+        //     $user->posts()->create($input);
+        //     session()->flash('success', '
+        //     Blog post successfully published!!');
+        //     } else {
+        //     session()->flash('failure', 'Blog posting failed!');
+        //     }
 
         session()->flash('success-profile', 'You successfully updated your profile!');
 
