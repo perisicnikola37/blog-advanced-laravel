@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function redirect() {
-        return redirect()->route('home');
+        return to_route('home');
     }
 }

@@ -12,7 +12,7 @@ class LogoutController extends Controller
         
         auth()->logout();
 
-        return redirect()->route('home');
+        return to_route('home');
         
     }
 

@@ -20,6 +20,13 @@ class User extends Authenticatable
 
     }
 
+    protected $path2 = "/img/";
+
+    public function getRandomAttribute($picture) {
+        return $this->path2 . $picture;
+
+    }
+
     protected $guarded = [];
 
     public function posts() {

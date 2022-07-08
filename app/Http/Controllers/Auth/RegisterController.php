@@ -40,7 +40,9 @@ class RegisterController extends Controller
 
         auth()->attempt($request->only('email', 'password'));
 
-        return redirect()->route('home');
+        session()->flash('registered', 'You successfully registered!');
+
+        return to_route('home')->withFragment('registered');
 
     }
 

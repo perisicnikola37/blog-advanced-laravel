@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('admin')->default('false');
             $table->string('picture')->default('no-picture');
-            $table->string('random')->default('img/avatar.png');
+            $table->string('random')->default('avatar.png');
             $table->timestamps();
             $table->rememberToken();
         });
@@ -37,7 +37,7 @@ return new class extends Migration
             'password' => Hash::make('password'),
             'admin' => 'true',
             'picture' => 'no-picture',
-            'random' => 'img/avatar.png',
+            'random' => 'avatar.png',
             'created_at' => Carbon::now(),
         ]);
 

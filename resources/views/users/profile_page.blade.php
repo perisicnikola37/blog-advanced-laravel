@@ -34,10 +34,11 @@
                   </div>
                   <div class="mb-6">
                     <label for="picture" class="block mb-2 mt-3 text-sm font-medium text-blue-700">Your picture</label>
+                    
                     <img 
                     class="h-36 mb-3 rounded-t-xl"
-                    src="{{$user->picture}}" 
-                    alt="">
+                    src="{{$user->picture === "/storage/profile_images/no-picture" ? $user->random : $user->picture}}">
+      
                     <input type="file" id="picture" for="picture" name="picture" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:placeholder-gray-400 dark:text-gray dark:focus:ring-red-500">
                   </div>
                

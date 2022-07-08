@@ -27,7 +27,7 @@ class LoginController extends Controller
 
         session()->flash('logged-in', 'Logged in!');
 
-        return redirect()->route('home')->withFragment('logged-in');
+        return to_route('home')->withFragment('logged-in');
 
     }
 
