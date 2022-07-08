@@ -32,56 +32,63 @@ Route::get('/home', function() {
 })->name('home');
 
 // Dashboard
+
 Route::get('/dashboard', [DashboardController::class, 'index'])
 ->name('dashboard')
 ->middleware('auth');
 
+Route::controller(RegisterController::class)->group(function() {
 // Register
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
+});
 
+Route::controller(LoginController::class)->group(function() {
 // Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
+});
 
 // Logout
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
+Route::controller(QuoteController::class)->group(function() {
+// Quotes
+Route::get('/quotes', [QuoteController::class, 'index'])->name('quotes');
+Route::post('/quotes', [QuoteController::class, 'store']);
+});
+
+Route::controller(PostLikeController::class)->group(function() {
+// Like
+Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
+// Dislike
+Route::delete('/posts/{post}/dislikes', [PostLikeController::class, 'destroy'])->name('posts.dislikes');
+});
+
+// All posts of a certain user
+Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
+
+Route::controller(PostController::class)->group(function() {
 // Posts
 Route::get('/posts', [PostController::class, 'index'])
 ->name('posts')
 ->middleware('auth');
 Route::post('/posts', [PostController::class, 'store']);
 Route::delete('/posts/{post}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
-
-// Quotes
-Route::get('/quotes', [QuoteController::class, 'index'])->name('quotes');
-Route::post('/quotes', [QuoteController::class, 'store']);
-
-// Like
-Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
-
-// Dislike
-Route::delete('/posts/{post}/dislikes', [PostLikeController::class, 'destroy'])->name('posts.dislikes');
-
-// All posts of certaion user
-Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
-
 // Show single post 
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
-
 // Search
 Route::get('/search', [PostController::class, 'search'])->name('search');
+// Post edit
+Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+// Post update
+Route::put('/posts/{id}/update', [PostController::class, 'update'])->name('posts.update');
+});
 
+Route::controller(UserController::class)->group(function() {
+// User profile
 Route::get('/user/{user:username}/profile', [UserController::class, 'show'])->name('users.profile');
-
 // User edit
 Route::put('/user/{id}/update', [UserController::class, 'update'])->name('users.update');
+});
 
-// Post edit
-
-Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
-
-// Post update
-
-Route::put('/posts/{id}/update', [PostController::class, 'update'])->name('posts.update');
