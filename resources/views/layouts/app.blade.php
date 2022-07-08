@@ -41,7 +41,7 @@
         <li>
             <a style="transition: 0.25s" href="/" class="p-2 rounded-sm
             
-            {{ (request()->is('/')) ? 'border-b-2 border-indigo-500' : '' }}
+            {{ (request()->is('home')) ? 'border-b-2 border-indigo-500' : '' }}
 
             ">Home</a>
         </li>
@@ -95,10 +95,18 @@
         @endauth
 
         @guest
-        <li>
+        <li class="p-1
+        
+        {{ (request()->is('login')) ? 'border-b-2 border-indigo-500' : '' }}
+
+        ">
             <a href="{{route('login')}}" class="p-3">Log In</a>
         </li>
-        <li>
+        <li class="p-1
+        
+        {{ (request()->is('register')) ? 'border-b-2 border-indigo-500' : '' }}
+
+        ">
             <a href="{{route('register')}}" class="p-3">Register</a>
         </li>
         @endguest
