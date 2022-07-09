@@ -3,12 +3,11 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class PostCollection extends JsonResource
+class PostShowResource extends JsonResource
 {
     /**
-     * Transform the resource collection into an array.
+     * Transform the resource into an array.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
@@ -19,9 +18,6 @@ class PostCollection extends JsonResource
             'ID' => $this->id,
             'Title:' => $this->name,
             'Content:' => $this->body,
-            'href' => [
-            'link' => route('posts.show-api', $this->id)
-            ],
         ];
     }
 }

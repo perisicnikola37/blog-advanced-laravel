@@ -19,20 +19,16 @@ Route::get('/', [HomeController::class, 'redirect']);
 
 // Home
 Route::get('/home', function() {
-
     $quote = Quote::latest('created_at')->first();
-
     $user = Auth::user();
 
     return view('home', [
         'quote' => $quote,
         'user' => $user,
     ]);
-
 })->name('home');
 
 // Dashboard
-
 Route::get('/dashboard', [DashboardController::class, 'index'])
 ->name('dashboard')
 ->middleware('auth');
@@ -44,7 +40,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 });
 
 Route::controller(LoginController::class)->group(function() {
-// Login
+// Log In
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 });
@@ -53,8 +49,9 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::controller(QuoteController::class)->group(function() {
-// Quotes
+// Quotes index
 Route::get('/quotes', [QuoteController::class, 'index'])->name('quotes');
+// Quotes store
 Route::post('/quotes', [QuoteController::class, 'store']);
 });
 
@@ -69,26 +66,28 @@ Route::delete('/posts/{post}/dislikes', [PostLikeController::class, 'destroy'])-
 Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
 
 Route::controller(PostController::class)->group(function() {
-// Posts
+// Posts index
 Route::get('/posts', [PostController::class, 'index'])
 ->name('posts')
 ->middleware('auth');
+// Posts store
 Route::post('/posts', [PostController::class, 'store']);
+// Posts delete
 Route::delete('/posts/{post}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
 // Show single post 
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 // Search
 Route::get('/search', [PostController::class, 'search'])->name('search');
-// Post edit
+// Posts edit
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
-// Post update
+// Posts update
 Route::put('/posts/{id}/update', [PostController::class, 'update'])->name('posts.update');
 });
 
 Route::controller(UserController::class)->group(function() {
 // User profile
 Route::get('/user/{user:username}/profile', [UserController::class, 'show'])->name('users.profile');
-// User edit
+// Users edit
 Route::put('/user/{id}/update', [UserController::class, 'update'])->name('users.update');
 });
 
