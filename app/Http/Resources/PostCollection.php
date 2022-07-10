@@ -17,7 +17,7 @@ class PostCollection extends JsonResource
     {
         return [
             'ID' => $this->id,
-            'Title:' => $this->name,
+            'Title:' => $this->title,
             'Content:' => $this->body,
             'href' => [
             'link' => route('posts.show-api', $this->id)
