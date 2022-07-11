@@ -14,7 +14,6 @@ use Whoops\Run;
 
 class PostControllerAPI extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth:api')->except('index', 'show');
@@ -23,7 +22,6 @@ class PostControllerAPI extends Controller
     public function index() {
         // return Post::all();
         return PostCollection::collection(Post::paginate(5));
-
     }
 
     public function show(Post $post) {
@@ -43,7 +41,6 @@ class PostControllerAPI extends Controller
     }
 
     public function update(Request $request, Post $post) {
-        
         $post->update($request->all());
 
         return response([
@@ -52,13 +49,11 @@ class PostControllerAPI extends Controller
     }
 
     public function destroy(Post $post) {
-        
         $post->delete();
 
         return response([
             'data' => 'Post has been successfully deleted.'
         ], 200);
-
     }
 
 }
