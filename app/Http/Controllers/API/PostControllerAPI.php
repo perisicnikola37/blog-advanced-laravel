@@ -55,5 +55,4 @@ class PostControllerAPI extends Controller
             'data' => 'Post has been successfully deleted.'
         ], 200);
     }
-
 }

@@ -22,7 +22,7 @@ Route::post('/posts/store', [PostControllerAPI::class, 'store'])
 Route::put('/posts/update/{post}', [PostControllerAPI::class, 'update'])
 ->name('posts.update-api');
 // Posts destroy
-Route::delete('/posts/delete/{post}', [PostControllerAPI::class, 'destroy'])
+Route::delete('/post/delete/{post}', [PostControllerAPI::class, 'destroy'])
 ->name('posts.destroy-api');
 });
 
@@ -35,5 +35,11 @@ Route::get('/quotes/show/{quote}', [QuoteControllerAPI::class, 'show'])
 // Quotes store
 Route::post('/quotes/store', [QuoteControllerAPI::class, 'store'])
 ->name('quotes.store-api');
+// Quotes update
+Route::put('/quotes/update/{quote}', [QuoteControllerAPI::class, 'update'])
+->name('quotes.update-api');
+// Quotes destroy
+Route::delete('/quote/delete/{quote}', [QuoteControllerAPI::class, 'destroy'])
+->name('quotes.destroy-api');
 });
 
