@@ -15,7 +15,7 @@
 ## Installation
 * Clone the repository by running the following command in your command line below (Or you can download the zip file from GitHub)
 ```shell
-git clone https://github.com/dzonidevv/cortex.git
+git clone https://github.com/dzonidevv/blog-advanced
  ```
 * Head to the projects directory
 ```shell
