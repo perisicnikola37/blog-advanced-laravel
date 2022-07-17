@@ -62,6 +62,14 @@ After running the above commands, you should be able to access the application a
 * There are two roles: 
 - `administrator` and `subscriber`
 
+## 🚀 Tech used
+
+* PHP v.8
+* Laravel v.9
+* MySQL
+* HTML v.5 / CSS v.3 / Tailwind v.3
+* JavaScript 
+
 ## Laravel RESTful API for this project <img height="20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" />
 
 Making a Request
