@@ -24,7 +24,7 @@ class PostController extends Controller
         // $posts = Post::orderBy('created_at', 'desc')->with(['user', 'likes'])->paginate(20);
 
         // new convention
-        $posts = Post::latest()->with(['user', 'likes'])->paginate(20);
+        $posts = Post::latest()->with(['user', 'likes'])->paginate(4);
 
         $today_posts = Post::whereDate('created_at', Carbon::today())->get();
 

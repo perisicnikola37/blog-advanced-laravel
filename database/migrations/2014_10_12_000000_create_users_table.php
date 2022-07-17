@@ -33,7 +33,7 @@ return new class extends Migration
         DB::table('users')->insert([
             'name' => 'Test User',
             'username' => 'admin',
-            'email' => 'admin@gmail.com',
+            'email' => 'test@gmail.com',
             'password' => Hash::make('password'),
             'admin' => 'true',
             'picture' => 'no-picture',
