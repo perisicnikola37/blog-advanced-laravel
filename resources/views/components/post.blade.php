@@ -13,7 +13,7 @@
 
             <p style="word-break: break-word;" class="font-bold">{{$post->title}}</p>
 
-            <p style="word-break: break-word;">{{$post->body}}</p>
+            <p style="word-break: break-word;">{!! $post->body !!}</p>
     
             {{-- Changed to "PostPolicy" --}}
             {{-- @if ($post->ownedBy(Auth::user())) --}}

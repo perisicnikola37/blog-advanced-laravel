@@ -4,6 +4,9 @@
 
 @section('content')
 
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv">
 
 <div class="flex justify-center">
 <div class="w-8/12 bg-white p-6 rounded-sm">
@@ -51,6 +54,8 @@
 class="rounded-lg mb-5" 
 src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/988/posts/30254/image/website-homepage%20(1).jpg" 
 alt="">
+
+</div>
 
 </div>
 

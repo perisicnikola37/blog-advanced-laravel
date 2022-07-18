@@ -12,30 +12,12 @@
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png">
     {{-- Tailwind --}}
     <script src="https://cdn.tailwindcss.com"></script>
+    {{-- External CSS --}}
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-    <style>
-
-        /* width */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #6366F1;
-}
-
-    </style>
-
+    
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-200" onload="myFunction()">
     
     <nav class="p-6 bg-white flex justify-between mb-6">
        <ul class="flex items-center">
@@ -119,6 +101,8 @@
 
 {{-- Font Awesome --}}
 <script src="https://kit.fontawesome.com/2824446f9a.js" crossorigin="anonymous"></script>
+{{-- Preloader --}}
+<script type="text/javascript" src="{{asset('js/preloader/preloader.js')}}"></script>
 
 </body>
 
