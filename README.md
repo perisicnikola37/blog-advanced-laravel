@@ -2,9 +2,11 @@
 
 >This blog project has a homepage, dashboard, blog posts, quotes, and also liking/unliking for posts with getting mail for notification. Also, the user will only get one mail for each like. Spamming is solved. Also, this project is included a custom login/register system. More information is below...
 
-![schooldash-dahboard-page](https://i.postimg.cc/pdzqSMmf/logged-in.png)
-![schooldash-dahboard-page](https://i.postimg.cc/2SqH4ZmX/posts.png)
-![schooldash-dahboard-page](https://i.postimg.cc/nh63ThhV/profile.png)
+![schooldash-dahboard-page](https://i.postimg.cc/wxCVVpqX/1.png)
+![schooldash-dahboard-page](https://i.postimg.cc/RC6dKFBC/2.png)
+![schooldash-dahboard-page](https://i.postimg.cc/4y91g85H/3.png)
+![schooldash-dahboard-page](https://i.postimg.cc/B6tghZPg/4.png)
+![schooldash-dahboard-page](https://i.postimg.cc/pT7B3NDt/5.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/gktSXD9Z/mail.png)
 
 ## Requirements 
