@@ -66,3 +66,6 @@
 
     
 @endsection
+
+{{-- Refresh alert --}}
+<script type="text/javascript" src="{{asset('js/refresh_alert/refresh_alert.js')}}"></script>
