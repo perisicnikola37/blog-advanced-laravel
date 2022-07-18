@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-<title>Posts</title>
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
@@ -132,6 +130,7 @@
          
 @endsection
 
+<title>Posts</title>
 
 {{-- Refresh alert --}}
 <script type="text/javascript" src="{{asset('js/refresh_alert/refresh_alert.js')}}"></script>
