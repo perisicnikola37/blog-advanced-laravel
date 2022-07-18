@@ -26,7 +26,7 @@ class UserFactory extends Factory
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
             'admin' => 'false',
             'picture' => 'no-picture',
-            'random' => 'https://source.unsplash.com/random',
+            'random' => 'avatar.png',
             'created_at' => Carbon::now(),
             'created_at' => Carbon::now(),
             'remember_token' => Str::random(10),

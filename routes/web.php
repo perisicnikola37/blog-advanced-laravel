@@ -10,6 +10,7 @@ use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserPostController;
+use App\Models\Post;
 use App\Models\Quote;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,11 +21,13 @@ Route::get('/', [HomeController::class, 'redirect']);
 // Home
 Route::get('/home', function() {
     $quote = Quote::latest('created_at')->first();
+    $posts = Post::orderBy('created_at', 'desc')->take(3)->get();
     $user = Auth::user();
 
     return view('home', [
         'quote' => $quote,
         'user' => $user,
+        'posts' => $posts,
     ]);
 })->name('home');
 

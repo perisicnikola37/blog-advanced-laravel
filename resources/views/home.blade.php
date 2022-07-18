@@ -50,10 +50,37 @@
 
 <div class="flex justify-center mt-5">
 
-<img
+{{-- <img
 class="rounded-lg mb-5" 
-src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/988/posts/30254/image/website-homepage%20(1).jpg" 
-alt="">
+src="http://i0.wp.com/joyenergizer.com/wp-content/uploads/2017/05/IceIce.gif?fit=750,563" 
+alt=""> --}}
+
+<div class="container">
+
+  @foreach ($posts as $post)
+  <div class="card">
+    <div class="card__header">
+      <img src="https://source.unsplash.com/600x400/?computer" alt="Post Image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      {{-- <span class="tag tag-blue">Technology</span> --}}
+      <h4><a href="">{{$post->title}}</a></h4>
+      <p>{!! $post->body !!}</p>
+    </div>
+    <div class="card__footer">
+      <div class="user">
+      <img style="height: 40px" 
+      src="{{$post->user->picture == "/storage/profile_images/no-picture" ? $post->user->random : $post->user->picture}}"
+      alt="User Image" class="user__image">
+        <div class="user__info">
+          <h5>{{$post->user->name}}</h5>
+          <small>{{$post->created_at->diffForHumans()}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  @endforeach
+</div>
 
 </div>
 
