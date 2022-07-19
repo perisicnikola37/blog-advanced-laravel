@@ -14,6 +14,8 @@
 
   <body>
 
+  
+
 @section('content')
 
 <div id="loader"></div>
