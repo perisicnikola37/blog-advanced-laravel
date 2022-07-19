@@ -44,8 +44,8 @@ class PostController extends Controller
 
         // Using External Request
         // $this->validate($request, [
-        //     'title' => 'required|min:2|max:255|alpha',
-        //     'body' => 'required|min:10|max:255|alpha',
+             // 'title' => 'required|min:2|max:255|alpha',
+             // 'body' => 'required|min:10|max:255|alpha',
         // ]);
 
         // Using Relationship insted of this
@@ -53,6 +53,17 @@ class PostController extends Controller
         //     'user_id' => auth()->user()->id,
         //     'body' => $request->body,
         // ]);
+
+        if ($file = $request->file('picture')) {
+
+            $name = time() . $file->getClientOriginalName();
+
+            $file->move('storage/images/posts', $name);
+
+            $input['picture'] = $name; 
+
+        }
+
 
         auth()->user()->posts()->create($input);
 

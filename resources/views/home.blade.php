@@ -60,7 +60,7 @@ alt=""> --}}
   @foreach ($posts as $post)
   <div class="card">
     <div class="card__header">
-      <img src="https://source.unsplash.com/600x400/?computer" alt="Post Image" class="card__image" width="600">
+      <img src="{{'/storage/images/posts/' . $post->picture}}" alt="Post Image" class="card__image" width="600">
     </div>
     <div class="card__body">
       {{-- <span class="tag tag-blue">Technology</span> --}}
