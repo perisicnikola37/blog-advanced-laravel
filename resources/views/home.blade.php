@@ -64,7 +64,7 @@ alt=""> --}}
     </div>
     <div class="card__body">
       {{-- <span class="tag tag-blue">Technology</span> --}}
-      <h4><a href="{{route('posts.show', $post)}}">{{$post->title}}</a></h4>
+      <h4><a href="{{route('posts.show', $post->slug)}}">{{$post->title}}</a></h4>
       <p>{!! $post->body !!}</p>
     </div>
     <div class="card__footer">

@@ -84,9 +84,11 @@ class PostController extends Controller
 
     }
 
-    public function show(Post $post) {
+    public function show($slug) {
 
         $user = Auth::user();
+
+        $post = Post::findBySlug($slug);
 
         return view('posts.show', [
             'post' => $post,
