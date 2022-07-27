@@ -45,6 +45,14 @@
             ">Post</a>
         </li>
 
+        @guest
+        
+        <li>
+            <a class="credentials" href="#" class="p-2"><button onclick="credentials()">Credentials</button></a>
+        </li>
+
+        @endguest
+
         @auth
         
         @if (Auth::user()->admin == 'true' || Auth::user()->admin == 'TRUE')
@@ -103,7 +111,8 @@
 <script src="https://kit.fontawesome.com/2824446f9a.js" crossorigin="anonymous"></script>
 {{-- Preloader --}}
 <script type="text/javascript" src="{{asset('js/preloader/preloader.js')}}"></script>
-
+{{-- Credentials --}}
+<script type="text/javascript" src="{{asset('js/credentials/credentials.js')}}"></script>
 
 </body>
 

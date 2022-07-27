@@ -26,13 +26,6 @@
 <h1 class="font-bold">Welcome back<span class="text-blue-700">{{Auth::check() ? ' ' . Auth::user()->name : ' there!'}}</span></h1>
 <p class="mt-2">How are you today..? I have an quote for you, hope you will like it &#128512;</p>
 <p class="mt-2 mb-2 text-rose-500">Quote:</p>
-{{-- <select name="select" id="select">
-    <option value="">Choose category</option>
-    <option value="">Motivation</option>
-    <option value="">Success</option>
-    <option value="">Love</option>
-    <option value="">Money</option>
-</select> --}}
 
 @if ($quote)
 
