@@ -57,7 +57,7 @@ After running the above commands, you should be able to access the application a
 
 ## Setup
 * Log in to the application with the following credentials
-    * Email: test@gmail.com
+    * Email: admin@gmail.com
     * Password: password
     
 
