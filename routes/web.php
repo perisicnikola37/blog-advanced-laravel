@@ -78,7 +78,7 @@ Route::post('/posts', [PostController::class, 'store']);
 // Posts delete
 Route::delete('/posts/{post}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
 // Show single post 
-Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show');
 // Search
 Route::get('/search', [PostController::class, 'search'])->name('search');
 // Posts edit

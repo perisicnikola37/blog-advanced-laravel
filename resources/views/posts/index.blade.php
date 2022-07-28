@@ -44,7 +44,7 @@
         @auth
 
         <div>
-            <form class="flex items-center" action="{{route('search')}}" method="GET">   
+            <form class="flex items-center" action="{{route('search')}}" method="GET" enctype='multipart/form-data'>   
 
                 <div class="relative w-full">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -59,7 +59,7 @@
         </div>
         
         
-        <form action="{{route('posts')}}" method="post" class="mb-4">
+        <form action="{{route('posts')}}" method="post" class="mb-4" enctype='multipart/form-data'>
             @csrf
         
             <div class="mb-4">
@@ -88,7 +88,11 @@
                 id="myeditorinstance" 
                 rows="1"
                 placeholder="Type your blog content.."></textarea>
-        
+
+                
+                <input type="file" class="mt-5" id="picture" name="picture">
+
+                
             </div>
         
             <div>

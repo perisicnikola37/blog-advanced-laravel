@@ -11,7 +11,9 @@
         
             <hr class="mt-2 mb-2">
 
-            <p style="word-break: break-word;" class="font-bold">{{$post->title}}</p>
+            <a href="{{route('posts.show', $post->slug)}}" class="font-bold">
+                {{$post->title}}
+            </a>
 
             <p style="word-break: break-word;">{!! $post->body !!}</p>
     
