@@ -89,10 +89,7 @@
                 rows="1"
                 placeholder="Type your blog content.."></textarea>
 
-                
-                <input type="file" class="mt-5" id="picture" name="picture">
-
-                
+                <input type="file" class="mt-5" id="picture" name="picture">                
             </div>
         
             <div>

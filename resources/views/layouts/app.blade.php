@@ -14,6 +14,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     {{-- External CSS --}}
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    {{-- TinyMCE --}}
+    <x-head.tinymce-config/>
     
 </head>
 

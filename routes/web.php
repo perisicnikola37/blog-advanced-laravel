@@ -78,13 +78,13 @@ Route::post('/posts', [PostController::class, 'store']);
 // Posts delete
 Route::delete('/posts/{post}/delete', [PostController::class, 'destroy'])->name('posts.destroy');
 // Show single post 
-Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/post/{slug}', [PostController::class, 'show'])->name('posts.show');
 // Search
 Route::get('/search', [PostController::class, 'search'])->name('search');
 // Posts edit
-Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+Route::get('/post/{slug}/edit', [PostController::class, 'edit'])->name('posts.edit');
 // Posts update
-Route::put('/posts/{id}/update', [PostController::class, 'update'])->name('posts.update');
+Route::put('/post/{id}/update', [PostController::class, 'update'])->name('posts.update');
 });
 
 Route::controller(UserController::class)->group(function() {

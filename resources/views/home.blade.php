@@ -43,22 +43,16 @@
 
 <div class="flex justify-center mt-5">
 
-{{-- <img
-class="rounded-lg mb-5" 
-src="http://i0.wp.com/joyenergizer.com/wp-content/uploads/2017/05/IceIce.gif?fit=750,563" 
-alt=""> --}}
-
 <div class="container">
 
   @foreach ($posts as $post)
   <div class="card">
     <div class="card__header">
-      <img src="{{'/storage/images/posts/' . $post->picture}}" alt="Post Image" class="card__image" width="600">
+      <img src="{{$post->picture == 'no-picture' ? $post->placeholder : '/storage/images/posts/' . $post->picture}}" alt="Post Image" class="card__image" width="600">
     </div>
     <div class="card__body">
-      {{-- <span class="tag tag-blue">Technology</span> --}}
       <h4><a href="{{route('posts.show', $post->slug)}}">{{$post->title}}</a></h4>
-      <p>{!! $post->body !!}</p>
+      {{-- <p>{!! $post->body !!}</p> --}}
     </div>
     <div class="card__footer">
       <div class="user">
@@ -77,6 +71,7 @@ alt=""> --}}
 
 </div>
 
+{{-- Map --}}
 <center>
 
   <div style="margin-bottom: 3%" class="mapouter"><div class="gmap_canvas"><iframe width="800" height="511" id="gmap_canvas" src="https://maps.google.com/maps?q=Podgorica&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br><style>.mapouter{position:relative;text-align:right;height:511px;width:800px;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:511px;width:800px;}</style></div></div>

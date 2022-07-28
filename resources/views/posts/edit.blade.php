@@ -27,10 +27,13 @@
 
                 <div class="mb-6">
                     <label class="block mb-2 mt-4 text-sm font-medium text-blue-700">Post Content <span class="text-red-500">*</span></label>
-                    <input type="text" id="body" for="body" name="body" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:placeholder-gray-400 dark:text-gray dark:focus:ring-red-500 @error('body') border-red-500 @enderror" value="{{$post->body}}">
-                    @error('body')
-                    <p class="mb-2 text-sm">{{$message}}</p>
-                    @enderror
+                  <textarea 
+                    name="body" 
+                    id="myeditorinstance" 
+                    rows="1"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:placeholder-gray-400 dark:text-gray dark:focus:ring-red-500 @error('body') border-red-500 @enderror" value="{!! $post->body !!}">
+                  {!! $post->body !!}
+                  </textarea>
                   </div>
                
                 <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save changes</button>

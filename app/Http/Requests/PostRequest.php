@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Horizontal;
 use Illuminate\Foundation\Http\FormRequest;
 
 class PostRequest extends FormRequest
@@ -26,6 +27,11 @@ class PostRequest extends FormRequest
         return [
             'title' => 'required|min:2|max:255',
             'body' => 'required|min:10',
+            'picture' => 'required',
+            // 'picture' => [
+            //     'required',
+            //     'horizontal',
+            // ]
         ];
     }
 }

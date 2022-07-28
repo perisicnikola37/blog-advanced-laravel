@@ -21,6 +21,7 @@ class PostFactory extends Factory
             'user_id' => User::all()->random(),
             'title' => $this->faker->sentence(2),
             'body' => $this->faker->sentence(20),
+            'placeholder' => 'https://source.unsplash.com/random',
         ];
     }
 }
