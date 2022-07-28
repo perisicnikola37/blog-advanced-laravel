@@ -27,6 +27,7 @@
 
                 <div class="mb-6">
                     <label class="block mb-2 mt-4 text-sm font-medium text-blue-700">Post Content <span class="text-red-500">*</span></label>
+
                   <textarea 
                     name="body" 
                     id="myeditorinstance" 
