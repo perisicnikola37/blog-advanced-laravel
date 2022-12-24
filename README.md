@@ -1,4 +1,4 @@
-# Blog Project | Laravel 9  <img height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" />
+# Blog project | Laravel 9  <img height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" />
 
 >This blog project has a homepage, dashboard, blog posts, quotes, and also liking/unliking for posts with getting mail for notification. Also, the user will only get one mail for each like. Spamming is solved. Also, this project is included a custom login/register system. More information is below...
 
@@ -17,11 +17,11 @@
 ## Installation
 * Clone the repository by running the following command in your command line below (Or you can download the zip file from GitHub)
 ```shell
-git clone https://github.com/dzonidevv/blog-advanced
+git clone https://github.com/perisicnikola37/blog-advanced-laravel.git
  ```
 * Head to the projects directory
 ```shell
-cd blog-advanced-master
+cd blog-advanced-laravel
  ```
 * Install/Update Composer dependencies
 ```shell
