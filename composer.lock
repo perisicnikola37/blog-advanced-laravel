@@ -1484,16 +1484,16 @@
         },
         {
             "name": "laravel/sanctum",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
-                "reference": "bf5cb6c256d19a108bdfaca121b2594da063fbd5"
+                "reference": "d09d69bac55708fcd4a3b305d760e673d888baf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/bf5cb6c256d19a108bdfaca121b2594da063fbd5",
-                "reference": "bf5cb6c256d19a108bdfaca121b2594da063fbd5",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/d09d69bac55708fcd4a3b305d760e673d888baf9",
+                "reference": "d09d69bac55708fcd4a3b305d760e673d888baf9",
                 "shasum": ""
             },
             "require": {
@@ -1545,7 +1545,7 @@
                 "issues": "https://github.com/laravel/sanctum/issues",
                 "source": "https://github.com/laravel/sanctum"
             },
-            "time": "2023-01-06T15:43:53+00:00"
+            "time": "2023-01-13T15:41:49+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2725,16 +2725,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v3.2.8",
+            "version": "v3.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368"
+                "reference": "c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
-                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
+                "url": "https://api.github.com/repos/nette/utils/zipball/c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c",
+                "reference": "c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c",
                 "shasum": ""
             },
             "require": {
@@ -2744,6 +2744,7 @@
                 "nette/di": "<3.0.6"
             },
             "require-dev": {
+                "jetbrains/phpstorm-attributes": "dev-master",
                 "nette/tester": "~2.0",
                 "phpstan/phpstan": "^1.0",
                 "tracy/tracy": "^2.3"
@@ -2804,9 +2805,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.8"
+                "source": "https://github.com/nette/utils/tree/v3.2.9"
             },
-            "time": "2022-09-12T23:36:20+00:00"
+            "time": "2023-01-18T03:26:20+00:00"
         },
         {
             "name": "nikic/php-parser",
