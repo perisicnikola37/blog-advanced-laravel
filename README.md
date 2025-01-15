@@ -4,9 +4,7 @@
 
 ![schooldash-dahboard-page](https://i.postimg.cc/wxCVVpqX/1.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/RC6dKFBC/2.png)
-![schooldash-dahboard-page](https://i.postimg.cc/4y91g85H/3.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/B6tghZPg/4.png)
-![schooldash-dahboard-page](https://i.postimg.cc/pT7B3NDt/5.png)
 ![schooldash-dahboard-page](https://i.postimg.cc/gktSXD9Z/mail.png)
 
 ## Requirements 
